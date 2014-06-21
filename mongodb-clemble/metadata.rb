@@ -1,7 +1,7 @@
 
 name        "mongodb-clemble"
 description 'Example cookbook for MongoDB Berkshelf based install'
-maintainer  "MyOrg"
+maintainer  "Clemble"
 license     "Apache 2.0"
 version     "1.0.0"
 
