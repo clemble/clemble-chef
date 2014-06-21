@@ -1,6 +1,6 @@
 
 site :opscode
 
-cookbook 'mongodb'
-cookbook 'redis'
-cookbook 'rabbitmq'
+cookbook "mongodb"
+cookbook "redis"
+cookbook "rabbitmq"
