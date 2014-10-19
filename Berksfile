@@ -1,5 +1,5 @@
 
-site :opscode
+source "https://api.berkshelf.com"
 
 cookbook 'java', '~> 1.28.0'
 
@@ -10,5 +10,5 @@ cookbook 'redisio', '~> 2.2.4'
 
 cookbook 'rabbitmq', '~> 3.3.0'
 
-cookbook 'neo4j', git: 'git://github.com/michaelklishin/neo4j-server-chef-cookbook.git'
+cookbook 'neo4j-server', git: 'git://github.com/michaelklishin/neo4j-server-chef-cookbook.git'
 
