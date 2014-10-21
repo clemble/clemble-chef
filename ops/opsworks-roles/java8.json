@@ -4,16 +4,11 @@
   "default_attributes": {
   },
   "run_list": [
-    /*"recipe[opsworks_initial_setup]",*/
-    /*"recipe[mysql::client]",*/
-    /*"recipe[dependencies]",*/
-    /*"recipe[opsworks_ganglia::client]",*/
     "recipe[java::oracle]",
-    /*"recipe[opsworks_java::tomcat_setup]",
-    "recipe[opsworks_ganglia::configure-client]",
+    "recipe[opsworks_java::tomcat_setup]",
     "recipe[opsworks_java::configure]",
     "recipe[deploy::default]",
-    "recipe[deploy::java]"*/
+    "recipe[deploy::java]"
   ],
   "chef_type": "role",
   "json_class": "Chef::Role"
