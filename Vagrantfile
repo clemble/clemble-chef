@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.berkshelf.enabled = true
 
   # Ensure we are using the correct Chef version
-  config.omnibus.chef_version = "11.10.0"
+  config.omnibus.chef_version = "11.10.4"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -105,9 +105,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
            :accept_license_agreement => true
         },
         :opsworks_java => {
-            :tomcat => {
-                :java_opts => "-Djava.awt.headless=true -Xmx1996m -Dspring.profiles.active=cloud"
-            }
+           :tomcat => {
+               :java_opts => "-Djava.awt.headless=true -Xmx1996m -Dspring.profiles.active=cloud"
+           }
         },
         :opsworks => {
           :ruby_stack => "ruby",
