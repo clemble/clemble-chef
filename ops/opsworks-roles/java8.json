@@ -5,10 +5,7 @@
   },
   "run_list": [
     "recipe[java::oracle]",
-    "recipe[opsworks_java::tomcat_setup]",
-    "recipe[opsworks_java::configure]",
-    "recipe[deploy::default]",
-    "recipe[deploy::java]"
+    "recipe[tomcat]"
   ],
   "chef_type": "role",
   "json_class": "Chef::Role"

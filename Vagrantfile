@@ -104,6 +104,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
            :set_default => true,
            :accept_license_agreement => true
         },
+        :tomcat => {
+           :base_version => "7"
+           :port => "80"
+           :java_options => "-Djava.awt.headless=true -Dspring.profiles.active=cloud"
+        },
         :opsworks_java => {
            :tomcat => {
                :java_opts => "-Djava.awt.headless=true -Xmx1996m -Dspring.profiles.active=cloud"
