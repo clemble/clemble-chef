@@ -10,5 +10,5 @@
 #
 #normal['opsworks_java']['tomcat']['threadpool_max_threads'] = 150
 
-normal['opsworks_java']['jvm'] = 'openjdk'
+normal['opsworks_java']['jvm'] = 'oracle'
 normal['opsworks_java']['jvm_version'] = '8'
