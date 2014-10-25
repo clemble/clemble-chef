@@ -4,8 +4,9 @@
   "default_attributes": {
   },
   "run_list": [
-    "recipe[java]",
-    "recipe[tomcat]"
+    "recipe[rabbitmq::default]",
+    "recipe[rabbitmq::mgmt_console]",
+    "recipe[clemble::rabbitmq]"
   ],
   "chef_type": "role",
   "json_class": "Chef::Role"
