@@ -92,7 +92,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.data_bags_path = "../my-recipes/data_bags"
   #   chef.add_recipe "mysql"
 
-     chef.add_role "java8"
+     chef.add_role "rabbitmq"
   #
   #   # You may also specify custom JSON attributes:
      chef.json = {
@@ -114,6 +114,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
            :tomcat => {
                :java_opts => "-Djava.awt.headless=true -Xmx1996m -Dspring.profiles.active=cloud"
            }
+        },
+        :rabbitmq => {
+           :enabled_users => [ {
+             :name => "clemble",
+             :password => "clemble",
+             :tag => "administrator",
+             :rights => [{ :vhost => nil , :conf => '.*', :write => '.*', :read => '.*' }]
+           } ],
+           :disabled_users => []
         },
         :opsworks => {
           :ruby_stack => "ruby",

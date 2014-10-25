@@ -1,0 +1,12 @@
+{
+  "name": "neo4j",
+  "description": "OpsWorks recipe run-list for the Neo 4J app layer",
+  "default_attributes": {
+  },
+  "run_list": [
+    "recipe[java]",
+    "recipe[neo4j-server::tarball]"
+  ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}

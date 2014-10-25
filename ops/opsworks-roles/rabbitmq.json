@@ -1,0 +1,13 @@
+{
+  "name": "java8",
+  "description": "OpsWorks recipe run-list for the Java 8 app layer",
+  "default_attributes": {
+  },
+  "run_list": [
+    "recipe[rabbitmq::default]",
+    "recipe[rabbitmq::mgmt_console]",
+    "recipe[rabbitmq::user_management]"
+  ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
