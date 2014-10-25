@@ -9,6 +9,8 @@ cookbook 'redisio', '~> 2.2.4'
 
 cookbook 'rabbitmq', '~> 3.3.0'
 
+cookbook 'datadog'
+
 cookbook 'tomcat'
 
 cookbook 'neo4j-server', git: 'git://github.com/michaelklishin/neo4j-server-chef-cookbook.git'

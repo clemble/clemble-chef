@@ -97,6 +97,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   # You may also specify custom JSON attributes:
      chef.json = {
        :java => {
+           :install_flavor => "oracle",
            :jdk_version => "8",
            :oracle => {
                :accept_oracle_download_terms => true
@@ -105,8 +106,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
            :accept_license_agreement => true
         },
         :tomcat => {
-           :base_version => "7"
-           :port => "80"
+           :base_version => "7",
+           :port => 80,
            :java_options => "-Djava.awt.headless=true -Dspring.profiles.active=cloud"
         },
         :opsworks_java => {

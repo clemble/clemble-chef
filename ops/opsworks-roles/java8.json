@@ -4,7 +4,7 @@
   "default_attributes": {
   },
   "run_list": [
-    "recipe[java::oracle]",
+    "recipe[java]",
     "recipe[tomcat]"
   ],
   "chef_type": "role",
