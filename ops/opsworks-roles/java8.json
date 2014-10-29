@@ -4,9 +4,14 @@
   "default_attributes": {
   },
   "run_list": [
-    "recipe[rabbitmq::default]",
-    "recipe[rabbitmq::mgmt_console]",
-    "recipe[clemble::rabbitmq]"
+    "recipe[opsworks_initial_setup]",
+    "recipe[opsworks_java::tomcat_install]",
+    "recipe[java]",
+    "recipe[opsworks_java::tomcat_container_config]",
+    "recipe[opsworks_java::tomcat_service]",
+    "recipe[clemble::tomcat]",
+    "recipe[apache2]",
+    "recipe[opsworks_java::apache_tomcat_bind]"
   ],
   "chef_type": "role",
   "json_class": "Chef::Role"

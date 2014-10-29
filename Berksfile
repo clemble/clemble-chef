@@ -18,5 +18,7 @@ cookbook 'clemble', path: './clemble'
 cookbook 'neo4j-server', git: 'git://github.com/michaelklishin/neo4j-server-chef-cookbook.git'
 
 Dir.glob('/Users/mavarazy/work/git/aws/opsworks-cookbooks/**').each do |path|
-  cookbook File.basename(path), path: path
+  if File::directory?(path)
+    cookbook File.basename(path), path: path
+  end
 end
